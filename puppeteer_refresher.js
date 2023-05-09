@@ -12,7 +12,8 @@ const puppeteer = require("puppeteer");
 
         //go to the new page
 
-        await page.goto('https://google.com')
+        await page.goto('https://google.com',
+        {waitUntil: 'networkidle2', timeout: 0})
 
         const searchSelector = 'input[title="Search"]'  //attribute with title search
 
