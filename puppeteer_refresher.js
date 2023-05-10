@@ -14,8 +14,11 @@ const puppeteer = require("puppeteer");
         //go to the new page
 
         await page.goto('https://google.com')
+        
 
+        //variables
         const searchSelector = 'input[title="Search"]'  //attribute with title search
+        const restaurantSelector = '.rllt__details span'
 
         await page.waitForSelector(searchSelector)
 
@@ -25,6 +28,19 @@ const puppeteer = require("puppeteer");
 
         await page.keyboard.press("Enter");
 
+        await page.waitForSelector(restaurantSelector);
+
+        //go ahead and scrape
+
+        const titles = await page.evaluate(
+            (rs)=>{
+                const restaurantTitlesSpanTag = document.querySelectorAll(rs)    //DOM
+                const restaurantTitles = [...restaurantTitlesSpanTag].map(el => el.textContent)
+                return restaurantTitles
+            }, restaurantSelector)
+
+
+         console.log(titles)   
         console.log("done with automation")
     }
 )()
