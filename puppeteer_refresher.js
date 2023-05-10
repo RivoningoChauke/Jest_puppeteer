@@ -5,15 +5,15 @@ const puppeteer = require("puppeteer");
 (
     async()=>{
         const browser = await puppeteer.launch({
-            headless: false
+            headless: false,
+            slowMo: 70
         });
 
         const page = await browser.newPage(); //it create new page
 
         //go to the new page
 
-        await page.goto('https://google.com',
-        {waitUntil: 'networkidle2', timeout: 0})
+        await page.goto('https://google.com')
 
         const searchSelector = 'input[title="Search"]'  //attribute with title search
 
@@ -21,9 +21,9 @@ const puppeteer = require("puppeteer");
 
         await page.click(searchSelector, {clickCount: 1})
 
-        await page.type(searchSelector, "Pizza restaurants")
+        await page.type(searchSelector, "Pizza restaurants");
 
-        await page.keyboard.press("Enter")
+        await page.keyboard.press("Enter");
 
         console.log("done with automation")
     }
