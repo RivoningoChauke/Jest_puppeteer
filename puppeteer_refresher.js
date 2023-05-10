@@ -13,12 +13,16 @@ const puppeteer = require("puppeteer");
 
         //go to the new page
 
-        await page.goto('https://google.com', { waitUntil: 'load'})
+        await page.goto('https://google.com', {
+            waitUntil: 'load',
+            // Remove the timeout
+            timeout: 0
+        })
         
 
         //variables
-        const searchSelector = 'input[title="Search"]'  //attribute with title search
-        const restaurantSelector = '.rllt__details > span'
+        const searchSelector = 'textarea[title="Search"]'  //attribute with title search
+        const restaurantSelector = '.rllt__details span'
 
         await page.waitForSelector(searchSelector)
 
