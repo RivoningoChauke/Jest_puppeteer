@@ -22,7 +22,7 @@ const puppeteer = require("puppeteer");
 
         //variables
         const searchSelector = 'textarea[title="Search"]'  //attribute with title search
-        const restaurantSelector = '.rllt__details span'
+        const restaurantSelector = '.rllt__details [role="heading"] span'
 
         await page.waitForSelector(searchSelector)
 
