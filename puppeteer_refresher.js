@@ -19,6 +19,8 @@ const puppeteer = require("puppeteer");
             timeout: 0
         })
         
+        /*jkfgjemghbn ghergtkl rguwkrtf iwrgtr
+rtgio4 tgjwrkworgt gefrdkalg*/
 
         //variables
         const searchSelector = 'textarea[title="Search"]'  //attribute with title search

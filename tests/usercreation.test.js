@@ -23,6 +23,9 @@ function delay(ms){
     
 }
 
+/*jkfgjemghbn ghergtkl rguwkrtf iwrgtr
+rtgio4 tgjwrkworgt gefrdkalg*/
+
 beforeAll(async () => {
     browser = await puppeteer.launch({
         headless: false,
