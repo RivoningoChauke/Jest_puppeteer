@@ -18,6 +18,8 @@ form.addEventListener('submit', handleSubmit);
 ageInput.addEventListener("keydown", numberKeyDownHandler)
 
 
+//bhkdfg vsdjsg gjhtjklfgv
+
 function handleSubmit(e) {
     e.preventDefault();
     errorUl.textContent = ""
