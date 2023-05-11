@@ -9,6 +9,8 @@ const puppeteer = require("puppeteer");
             slowMo: 70
         });
 
+        //bhkdfg vsdjsg gjhtjklfgv
+
         const page = await browser.newPage(); //it create new page
 
         //go to the new page
