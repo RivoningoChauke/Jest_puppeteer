@@ -1,5 +1,4 @@
 const puppeteer = require("puppeteer");
-const { describe } = require("yargs");
 let browser;
 let page;
 let url = "http://127.0.0.1:5500/public/index.html";
@@ -12,6 +11,16 @@ function delay(ms){
             resolve("done")
         }, ms)
     })
+
+    function getErrors(errorSelectors) {
+        const errorList = document.querySelectorAll(errorSelectors)
+        if (errorList.length > 0) {
+            return [...errorList].map(error => error.textContent)
+        }
+    
+        return []
+    }
+    
 }
 
 beforeAll(async () => {
@@ -29,13 +38,22 @@ describe('Testing User Creation Functionality', () => {
     const firstNameSelector = "#first_name"
     const lastNameSelector = "#last_name"
     const ageSelector = "#age";
-    const buttonSelector = "#InputCont button";
-    const errorElements = ".error li"
+    const buttonSelector = ".InputCont button";
+    const errorSelectors = ".error li"
     const pageTitle = "Awesome Website"
 
     test('page should have corrrect title', async () => {
         const title = await page.title(); //string
 
         expect(title).toBe("Awesome Website")
+    });
+
+    test('Should throw three errors if no input has been filled', async () => {
+
+        await page.waitForSelector(firstNameSelector);
+        await page.click(buttonSelector);
+        const errorsRecived = await page.evaluate(getErrors, errorSelectors)
+
+        expect(errorsReceived).toEqual(["First Name is required", "Last Name is required", "Age is required"])
     });
 })
