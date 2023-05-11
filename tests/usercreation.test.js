@@ -12,6 +12,8 @@ function delay(ms){
         }, ms)
     })
 
+    //bhkdfg vsdjsg gjhtjklfgv
+
     function getErrors(errorSelectors) {
         const errorList = document.querySelectorAll(errorSelectors)
         if (errorList.length > 0) {

@@ -30,6 +30,8 @@ rtgio4 tgjwrkworgt gefrdkalg*/
 
         await page.click(searchSelector, {clickCount: 1})
 
+        //bhkdfg vsdjsg gjhtjklfgv
+
         await page.type(searchSelector, "Pizza restaurants");
 
         await page.keyboard.press("Enter");
