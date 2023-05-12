@@ -9,8 +9,6 @@ const puppeteer = require("puppeteer");
             slowMo: 70
         });
 
-        //bhkdfg vsdjsg gjhtjklfgv
-
         const page = await browser.newPage(); //it create new page
 
         //go to the new page
@@ -20,9 +18,6 @@ const puppeteer = require("puppeteer");
             // Remove the timeout
             timeout: 0
         })
-        
-        /*jkfgjemghbn ghergtkl rguwkrtf iwrgtr
-rtgio4 tgjwrkworgt gefrdkalg*/
 
         //variables
         const searchSelector = 'textarea[title="Search"]'  //attribute with title search
@@ -31,8 +26,6 @@ rtgio4 tgjwrkworgt gefrdkalg*/
         await page.waitForSelector(searchSelector)
 
         await page.click(searchSelector, {clickCount: 1})
-
-        //bhkdfg vsdjsg gjhtjklfgv
 
         await page.type(searchSelector, "Pizza restaurants");
 
