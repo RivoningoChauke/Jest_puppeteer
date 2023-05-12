@@ -62,7 +62,7 @@ describe('Testing User Creation Functionality', () => {
     });
 
     test('should only show 2 errors "last name" and "age"', async () => {
-        await page.type|(firstNameSelector, "Evidence")
+        await page.type(firstNameSelector, "Evidence")
         await page.click(buttonSelector)
         const errorsReceived = await page.evaluate(getErrors, errorSelectors)
         expect(errorsReceived).toEqual(['Last Name is required', 'Age is required'])
