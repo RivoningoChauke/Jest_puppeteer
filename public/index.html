@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Awesome Website</title>
+</head>
+
+<body>
+    <header>
+        <h1>Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <form class="card">
+            <div class="InputCont">
+                <input type="text" id="first_name" placeholder="Enter First Name">
+            </div>
+            <div class="InputCont">
+                <input type="text" id="last_name" placeholder="Enter Last Name">
+            </div>
+            <div class="InputCont">
+                <input type="text" id="age" placeholder="Enter Age">
+            </div>
+            <div class="InputCont">
+                <!-- <input type="submit" value="Submit"> -->
+                <button>Submit</button>
+            </div>
+            <ul class="error"></ul>
+        </form>
+
+        <div class="userlist">
+            <h1>My Users</h1>
+            <script type="module" src="./index.js"></script>
+
+            <ul>
+                <p class="card" id="nouser">No User has been added</p>
+            </ul>
+        </div>
+    </div>
+
+
+    
+</body>
+
+</html>
