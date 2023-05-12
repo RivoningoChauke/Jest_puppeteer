@@ -25,7 +25,7 @@ function getErrors(errorSelectors) {
 beforeAll(async () => {
     browser = await puppeteer.launch({
         headless: false,
-        // slowMo: 70,
+        slowMo: 70,
     })
 
     page = await browser.newPage();
@@ -36,16 +36,6 @@ beforeAll(async () => {
 afterAll(async () => {
     await browser.close()
 })
-
-
-
-
-
-
-
-
-
-
 
 
 describe('Testing User Creation Functionality', () => {
@@ -84,7 +74,7 @@ describe('Testing User Creation Functionality', () => {
 
     test("Successfully added a user", async () => {
         await page.type(lastNameSelector, "Mashamba")
-        await page.type(ageInputSelector, "89");
+        await page.type(ageInputSelector, "98");
 
         await page.click(buttonSelector)
 
@@ -110,7 +100,7 @@ describe('Testing User Creation Functionality', () => {
 
 
         expect(userData).toEqual({
-            allAges: ["89"],
+            allAges: ["98"],
             allUsers: ["Rivoningo Mashamba"]
         })
 
