@@ -17,9 +17,6 @@ const users = []
 form.addEventListener('submit', handleSubmit);
 ageInput.addEventListener("keydown", numberKeyDownHandler)
 
-
-
-
 function handleSubmit(e) {
     e.preventDefault();
     errorUl.textContent = ""
@@ -48,5 +45,3 @@ function handleSubmit(e) {
         ageInput
     })
 }
-
-//bhkdfg vsdjsg gjhtjklfgv
