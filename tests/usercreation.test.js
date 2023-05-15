@@ -37,7 +37,6 @@ afterAll(async () => {
     await browser.close()
 })
 
-
 describe('Testing User Creation Functionality', () => {
 
     const firstNameSelector = "#first_name"
@@ -66,15 +65,15 @@ describe('Testing User Creation Functionality', () => {
 
     test('should only show 2 errors "last name" and  "age"', async () => {
 
-        await page.type(firstNameSelector, "Rivoningo")
+        await page.type(firstNameSelector, "Evidence")
         await page.click(buttonSelector);
         const errorsRecieved = await page.evaluate(getErrors, errorSelectors)
         expect(errorsRecieved).toEqual(['Last Name is required', 'Age is required'])
     });
 
     test("Successfully added a user", async () => {
-        await page.type(lastNameSelector, "Mashamba")
-        await page.type(ageInputSelector, "98");
+        await page.type(lastNameSelector, "Chauke")
+        await page.type(ageInputSelector, "69");
 
         await page.click(buttonSelector)
 
@@ -97,11 +96,9 @@ describe('Testing User Creation Functionality', () => {
             userSelector,
             ageItemSelector
         })
-
-
         expect(userData).toEqual({
-            allAges: ["98"],
-            allUsers: ["Rivoningo Mashamba"]
+            allAges: ["69"],
+            allUsers: ["Evidence Chauke"]
         })
     })
 });
