@@ -103,10 +103,6 @@ describe('Testing User Creation Functionality', () => {
             allAges: ["98"],
             allUsers: ["Rivoningo Mashamba"]
         })
-
     })
-
-
-
 });
 
