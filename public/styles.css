@@ -89,5 +89,11 @@ input{
     margin-top: 10px;
     text-align: left;
     list-style: none;
+}
 
+.me{
+    color: #eee;
+    margin-top: auto;
+    border-radius: 0%;
+    font-family: 'Courier New', Courier, monospace;
 }

@@ -20,7 +20,6 @@ export const validateInput = (entries) => {
     if (!age) {
         errors.push("Age is required")
     }
-
     return errors;
 }
 
