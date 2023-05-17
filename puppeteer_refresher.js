@@ -41,8 +41,6 @@ const puppeteer = require("puppeteer");
                 const restaurantTitles = [...restaurantTitlesSpanTag].map(el => el.textContent)
                 return restaurantTitles
             }, restaurantSelector)
-
-
          console.log(titles)   
         console.log("done with automation")
     }
