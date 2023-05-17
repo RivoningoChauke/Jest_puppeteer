@@ -45,3 +45,7 @@ const puppeteer = require("puppeteer");
         console.log("done with automation")
     }
 )()
+
+//await page.click(searchSelector, {clickCount: 1})
+
+//await page.type(searchSelector, "Pizza restaurants");
