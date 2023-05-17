@@ -54,6 +54,14 @@ describe('Testing User Creation Functionality', () => {
         expect(title).toBe(pageTitle)
     });
 
+    /*
+   test('Page should have the correct title', async () => {
+        const title = await page.title(); // string
+
+        expect(title).toBe(pageTitle)
+    });
+    */
+
     test('Should throw three errors if no input has been filled', async () => {
 
         await page.waitForSelector(firstNameSelector);
